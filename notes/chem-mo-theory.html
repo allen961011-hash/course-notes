@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>共價鍵結與分子軌域理論 | 課程筆記庫</title>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --primary: #1e3a8a;
+      --accent: #0284c7;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 32px 20px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav span {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    header {
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 1.85rem;
+      margin-bottom: 6px;
+    }
+
+    .meta-date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .concept-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .concept-card h2 {
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .concept-card p {
+      margin-bottom: 12px;
+    }
+
+    .concept-card ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    .concept-card li {
+      margin-bottom: 6px;
+    }
+
+    .formula-box {
+      background-color: #eff6ff;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .summary-box {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 28px;
+    }
+
+    .summary-box h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #bae6fd;
+    }
+
+    .summary-box ul {
+      padding-left: 20px;
+    }
+
+    .summary-box li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="../index.html">← 返回筆記目錄</a>
+      <span>普通化學 | General Chemistry</span>
+    </nav>
+
+    <header>
+      <span class="badge">CHEM · 化學鍵結</span>
+      <h1>共價鍵結與分子軌域理論 (MO Theory)</h1>
+      <p class="meta-date">最後更新日期：2026-11-16</p>
+    </header>
+
+    <main>
+      <section class="concept-card">
+        <h2>1. 混成軌域與立體數 (Steric Number) 判斷</h2>
+        <p>決定中心原子的混成狀態時，核心概念是計算電子對排斥的「立體數」，也就是中心原子周圍的電子密度區域總數：</p>
+        <div class="formula-box">
+          立體數 (Steric Number) = 鍵結原子數 (σ 鍵數) + 孤對電子對數 (Lone Pairs)
+        </div>
+        <ul>
+          <li><strong>立體數 = 2</strong>：sp 混成（直線形，180°）</li>
+          <li><strong>立體數 = 3</strong>：sp² 混成（平面三角形，120°）</li>
+          <li><strong>立體數 = 4</strong>：sp³ 混成（四面體，109.5°）</li>
+          <li><strong>孤對電子與 π 鍵分工</strong>：孤對電子與 σ 鍵需佔據混成軌域以決定分子幾何形狀；未混成的純 p 軌域則保留給側面重疊形成 π 鍵。</li>
+        </ul>
+      </section>
+
+      <section class="concept-card">
+        <h2>2. σ 鍵與 π 鍵的對稱性差異</h2>
+        <p>共價鍵依原子軌域重疊方式與繞核間軸（Internuclear Axis）旋轉的對稱性，可分為兩類：</p>
+        <ul>
+          <li><strong>σ 鍵（頭對頭重疊）</strong>：電子雲密度集中於兩原子核連線軸上，具備<strong>圓柱對稱性</strong>，繞核間軸旋轉 180° 後波函數相位不變。</li>
+          <li><strong>π 鍵（肩並肩側面重疊）</strong>：核間軸本身為電子密度為零的<strong>節面 (Nodal Plane)</strong>，繞核間軸旋轉 180° 後波函數正負號會反轉（反對稱）。</li>
+        </ul>
+      </section>
+
+      <section class="concept-card">
+        <h2>3. 分子軌域鍵級 (Bond Order) 與磁性判別</h2>
+        <p>分子軌域理論將原子軌域線性組合為能量較低的鍵結軌域 (Bonding) 與能量較高的反鍵結軌域 (Antibonding, *)：</p>
+        <div class="formula-box">
+          鍵級 (Bond Order) = ½ × (鍵結軌域電子數 − 反鍵結軌域電子數)
+        </div>
+        <ul>
+          <li><strong>鍵級意義</strong>：鍵級越大，鍵能越強、鍵長越短；若鍵級 = 0，代表該分子無法穩定存在。</li>
+          <li><strong>順磁性 (Paramagnetic)</strong>：分子軌域中存在<strong>未成對電子</strong>，會被外加磁場吸引（例如 O₂ 分子）。</li>
+          <li><strong>逆磁性 (Diamagnetic)</strong>：所有電子皆<strong>兩兩成對</strong>，會微弱排斥外加磁場（例如 N₂ 分子）。</li>
+        </ul>
+      </section>
+
+      <section class="summary-box">
+        <h2>考前速記重點 (Key Takeaways)</h2>
+        <ul>
+          <li>算混成先算「立體數 = 鍵結原子數 + 孤對電子」，重鍵（雙鍵、參鍵）只算一個 σ 方向。</li>
+          <li>第二週期元素（B₂、C₂、N₂）因 s-p 軌域能量接近產生混合效應，使 σ<sub>2p</sub> 能量高於 π<sub>2p</sub>。</li>
+          <li>判斷 O₂ 具有順磁性是價鍵理論的盲點，必須透過分子軌域電子組態才能正確解釋。</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
